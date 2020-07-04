@@ -46,6 +46,10 @@ jobs:
         # Set up docker to authenticate
         # via gcloud command-line tool.
         gcloud auth configure-docker
+
+    - name: build blog
+      run: |
+        yarn build
       
     # Build the Docker image
     - name: Build

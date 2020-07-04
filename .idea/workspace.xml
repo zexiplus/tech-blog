@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90be345d-09c3-4c99-ab22-81ec9c987491" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/google.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/google.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1593846917438</updated>
       <workItem from="1593846918788" duration="368000" />
-      <workItem from="1593847299265" duration="2868000" />
+      <workItem from="1593847299265" duration="3140000" />
     </task>
     <servers />
   </component>
