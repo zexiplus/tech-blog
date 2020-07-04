@@ -1,3 +1,3 @@
 FROM nginx:1.13.0-alpine
 
-COPY ./public /usr/share/nginx/html
+COPY --from=compile compile_source/public /usr/share/nginx/html
