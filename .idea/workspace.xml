@@ -20,8 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90be345d-09c3-4c99-ab22-81ec9c987491" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1593846917438</updated>
       <workItem from="1593846918788" duration="368000" />
-      <workItem from="1593847299265" duration="2114000" />
+      <workItem from="1593847299265" duration="2868000" />
     </task>
     <servers />
   </component>
@@ -78,5 +77,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="987" y="475" width="586" height="490" key="find.popup" timestamp="1593849690399">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="987" y="475" width="586" height="490" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1593849690399" />
   </component>
 </project>
