@@ -1,4 +1,4 @@
 FROM node:alpine
 COPY . /compile_source
 WORKDIR /compile_source
-RUN yarn && yarn build
+RUN yarn && yarn clean && yarn build

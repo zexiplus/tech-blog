@@ -20,8 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90be345d-09c3-4c99-ab22-81ec9c987491" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudbuild.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile.compile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile.compile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README_CN.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_CN.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/hello-world.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,10 +49,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.github/workflows-bak" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/source/_posts" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/source/_posts" />
       <recent name="$PROJECT_DIR$/.github/workflows-bak" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -63,12 +72,18 @@
       <updated>1593846917438</updated>
       <workItem from="1593846918788" duration="368000" />
       <workItem from="1593847299265" duration="13794000" />
-      <workItem from="1594042632449" duration="815000" />
+      <workItem from="1594042632449" duration="1557000" />
+      <workItem from="1594045861231" duration="1522000" />
+      <workItem from="1594214833807" duration="7728000" />
+      <workItem from="1596459871549" duration="403000" />
+      <workItem from="1596461119352" duration="404000" />
+      <workItem from="1596463274413" duration="3299000" />
+      <workItem from="1596548815467" duration="4929000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -87,6 +102,7 @@
                   </entry>
                 </map>
               </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -107,16 +123,42 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/themes/hexo-theme-type" />
+      <path value="$PROJECT_DIR$/themes/hexo-theme-zero" />
+      <path value="$PROJECT_DIR$/themes/hexo-theme-ascent" />
+      <path value="$PROJECT_DIR$/themes/hexo-theme-material" />
+      <path value="$PROJECT_DIR$/themes/hexo-theme-Chic" />
+      <path value="$PROJECT_DIR$/themes/hexo-theme-huxblog" />
+    </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
+    <state x="880" y="385" key="#Images" timestamp="1596555337045">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="880" y="385" key="#Images/0.0.2560.1440@0.0.2560.1440" timestamp="1596555337045" />
+    <state x="794" y="346" key="#Notifications" timestamp="1596459897646">
+      <screen x="0" y="23" width="2560" height="1348" />
+    </state>
+    <state x="794" y="346" key="#Notifications/0.23.2560.1348@0.23.2560.1348" timestamp="1596459897646" />
     <state x="997" y="529" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593852405686">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="997" y="529" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1593852405686" />
-    <state x="987" y="475" width="586" height="490" key="find.popup" timestamp="1593849690399">
+    <state x="100" y="78" width="2360" height="1261" key="DiffContextDialog" timestamp="1596466913162">
+      <screen x="0" y="23" width="2560" height="1348" />
+    </state>
+    <state x="100" y="78" width="2360" height="1261" key="DiffContextDialog/0.23.2560.1348@0.23.2560.1348" timestamp="1596466913162" />
+    <state x="100" y="100" width="2360" height="1240" key="DiffContextDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1594047171916" />
+    <state x="789" y="359" key="SettingsEditor" timestamp="1596554373211">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="987" y="475" width="586" height="490" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1593849690399" />
+    <state x="789" y="359" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1596554373211" />
+    <state x="987" y="475" width="659" height="518" key="find.popup" timestamp="1596553729188">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="987" y="475" width="659" height="518" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1596553729188" />
   </component>
 </project>
