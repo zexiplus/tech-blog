@@ -16,7 +16,7 @@ nickname: Float
 
 ### this variable is MarkDown form.
 description: doing nothing.
-avatar: /image/avatar.jpg
+avatar: tech-blog/image/avatar.jpg
 
 # main menu navigation
 ## links key words should not be changed.
