@@ -1,26 +1,24 @@
-# Blog
+# 博客
 
-This blog is based on the open source blog system hexo, used to record and share practical knowledge in program engineering. The service runs on Google Cloud Platform, visit address: https://hexo-blog-service-mp2mnvwagq-de.a.run.app
-
-
+此博客使用 hexo 作为博客系统，使用 github actions 构建, 部署于 github pages， 访问地址: https://zexiplus.github.io/tech-blog
 
 
+## 分支
+- master 稳定分支
+- source 源码分支, 定期合并入 master
+- pages 部署分支， 用于部署 github pages
 
-## table of Contents
 
-* Docker usage that front-end engineers should understand
-* Nginx that front-end engineers should know
-* Kubernetes that front-end engineers should understand
-* Linux shell programming that front-end engineers should know
-* Continuous integration that front-end engineers should understand
+## 目录
 
 
 
-## Development
+
+## 开发
 
 
 
-**Installation dependencies**
+**安装依赖**
 
 ```shell
 npm install
@@ -28,7 +26,7 @@ npm install
 yarn
 ```
 
-**Start the development environment**
+**启动开发环境**
 
 ```shell
 npm run server
@@ -36,7 +34,7 @@ npm run server
 yarn server
 ```
 
-**Construct**
+**构建**
 
 ```shell
 npm run build
@@ -44,14 +42,15 @@ npm run build
 yarn build
 ```
 
-**Change theme**
+**更换主题**
 
-* Visit https://hexo.io/themes and download the theme to the `themes` folder
-* Modify the `_config.yml` file in the blog root directory to replace the original `theme` content
-* Preview after running `yarn clean`
+* 当前主题：[Chic](https://github.com/Siricee/hexo-theme-Chic)
+* 访问  https://hexo.io/themes 并下载主题至 `themes`  文件夹下
+* 修改博客根目录下的 `_config.yml` 文件，替换原 `theme` 内容
+* 运行 `yarn clean` 后预览
 
 
 
-## Deployment
+## 部署
 
-Push code to the `origin/master` branch to trigger cloud build to be automatically built and deployed in the cloud run environment.
+推送代码至 `source` 分支即可触发 github action 自动构建并部署在 github pages 环境中。 
