@@ -1,3 +1,9 @@
+---
+title: okteto 初阶使用指南：部署/调试官方示例 movies 站点
+date: 2020-09-15 23:51:05
+tags: okteto, devops, kubernetes
+---
+
 # okteto 初阶使用指南：部署/调试官方示例 movies 站点
 
 okteto， 一个在 kubernetes 环境中开发调试的工具
@@ -34,9 +40,9 @@ scoop install okteto
 
 浏览器打开：https://github.com/okteto/movies，并 fork 至自己的仓库
 
-![shot1](/images/shot1.jpg)
+![shot1](okteto/shot1.jpg)
 
-![shot2](/images/shot2.jpg)
+![shot2](okteto/shot2.jpg)
 
 
 
@@ -44,7 +50,7 @@ scoop install okteto
 
 浏览器打开：https://cloud.okteto.com/#/login， 并登陆 okteto cloud， 点击 deploy
 
-![shot3](/images/shot3.jpg)
+![shot3](okteto/shot3.jpg)
 
 
 
@@ -54,7 +60,7 @@ scoop install okteto
 
 复制之前 fork 的代码仓库地址(例如: https://github.com/zexiplus/movies)并填入, 点击 Deploy 按钮， 等待部署完成。
 
-![shot4](/images/shot4.jpg)
+![shot4](okteto/shot4.jpg)
 
 
 
@@ -62,11 +68,11 @@ scoop install okteto
 
 当看到三个服务 api， frontend， mongodb 均属于 running 状态， 部署已经完成。点击红色框选的链接 (https://movies-zexiplus.cloud.okteto.net/) , 即可访问 movies 站点 web 服务。
 
-![shot5](/images/shot5.jpg)
+![shot5](okteto/shot5.jpg)
 
 访问站点预览：
 
-![shot6](/images/shot6.jpg)
+![shot6](okteto/shot6.jpg)
 
 
 
@@ -127,15 +133,15 @@ okteto up
 
 等待启动完成， 返回 okteto cloud 界面观察 frontend 服务进入 in development 状态
 
-![shot7](/images/shot7.jpg)
+![shot7](okteto/shot7.jpg)
 
 编辑 `movies/frontend/src/App.scss` 背景颜色为红色并保存
 
-![shot8](/images/shot8.jpg)
+![shot8](okteto/shot8.jpg)
 
 等待构建完成，返回浏览器 https://movies-zexiplus.cloud.okteto.net/ 页面 , 发现页面背景色已改变为红色。
 
-![shot9](/images/shot9.jpg)
+![shot9](okteto/shot9.jpg)
 
 
 

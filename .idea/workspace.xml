@@ -22,6 +22,18 @@
     <list default="true" id="90be345d-09c3-4c99-ab22-81ec9c987491" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/imgs/shot1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/okteto/shot1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/imgs/shot2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/okteto/shot2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/imgs/shot3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/okteto/shot3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/imgs/shot4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/okteto/shot4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/imgs/shot5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/okteto/shot5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/imgs/shot6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/okteto/shot6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/imgs/shot7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/okteto/shot7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/imgs/shot8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/okteto/shot8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/imgs/shot9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/okteto/shot9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/okteto.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/okteto.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +55,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/source/_posts/imgs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/source/_posts/okteto" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/source/_posts/okteto" />
       <recent name="$PROJECT_DIR$/source/_posts/imgs" />
       <recent name="$PROJECT_DIR$/source/_posts" />
       <recent name="$PROJECT_DIR$/.github/workflows-bak" />
@@ -77,7 +90,7 @@
       <workItem from="1596463274413" duration="3299000" />
       <workItem from="1596548815467" duration="5140000" />
       <workItem from="1600178672220" duration="1832000" />
-      <workItem from="1600354409661" duration="1815000" />
+      <workItem from="1600354409661" duration="2880000" />
     </task>
     <servers />
   </component>
