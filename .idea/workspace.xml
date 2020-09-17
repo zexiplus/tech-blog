@@ -22,7 +22,6 @@
     <list default="true" id="90be345d-09c3-4c99-ab22-81ec9c987491" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/okteto.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/okteto.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +77,7 @@
       <workItem from="1596463274413" duration="3299000" />
       <workItem from="1596548815467" duration="5140000" />
       <workItem from="1600178672220" duration="1832000" />
-      <workItem from="1600354409661" duration="1297000" />
+      <workItem from="1600354409661" duration="1815000" />
     </task>
     <servers />
   </component>
