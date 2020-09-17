@@ -47,14 +47,14 @@
         
   
     <h2 class="article-title" itemprop="name">
-      <a href="/tech-blog/2020/09/17/okteto/">okteto</a>
+      <a href="/tech-blog/2020/09/15/okteto/">okteto 初阶使用指南：部署/调试官方示例 movies 站点</a>
       
     </h2>
   
 
 
         <div class="article-meta">
-          <time class="article-date" datetime="2020-09-17T15:32:01.946Z" itemprop="datePublished">September 17, 2020, 3:32 PM</time>
+          <time class="article-date" datetime="2020-09-15T23:51:05.000Z" itemprop="datePublished">September 15, 2020, 11:51 PM</time>
 
           
         </div>
@@ -78,16 +78,16 @@
 
 
 <h2 id="克隆项目"><a href="#克隆项目" class="headerlink" title="克隆项目"></a>克隆项目</h2><p>浏览器打开：<a href="https://github.com/okteto/movies，并" target="_blank" rel="noopener">https://github.com/okteto/movies，并</a> fork 至自己的仓库</p>
-<p><img src="/images/shot1.jpg" alt="shot1"></p>
-<p><img src="/images/shot2.jpg" alt="shot2"></p>
+<p><img src="/tech-blog/2020/09/15/okteto/shot1.jpg" alt="shot1"></p>
+<p><img src="/tech-blog/2020/09/15/okteto/shot2.jpg" alt="shot2"></p>
 <h2 id="登陆-okteto-cloud"><a href="#登陆-okteto-cloud" class="headerlink" title="登陆 okteto cloud"></a>登陆 okteto cloud</h2><p>浏览器打开：<a href="https://cloud.okteto.com/#/login，" target="_blank" rel="noopener">https://cloud.okteto.com/#/login，</a> 并登陆 okteto cloud， 点击 deploy</p>
-<p><img src="/images/shot3.jpg" alt="shot3"></p>
+<p><img src="/tech-blog/2020/09/15/okteto/shot3.jpg" alt="shot3"></p>
 <h2 id="部署服务"><a href="#部署服务" class="headerlink" title="部署服务"></a>部署服务</h2><p>复制之前 fork 的代码仓库地址(例如: <a href="https://github.com/zexiplus/movies)并填入" target="_blank" rel="noopener">https://github.com/zexiplus/movies)并填入</a>, 点击 Deploy 按钮， 等待部署完成。</p>
-<p><img src="/images/shot4.jpg" alt="shot4"></p>
+<p><img src="/tech-blog/2020/09/15/okteto/shot4.jpg" alt="shot4"></p>
 <h2 id="访问服务"><a href="#访问服务" class="headerlink" title="访问服务"></a>访问服务</h2><p>当看到三个服务 api， frontend， mongodb 均属于 running 状态， 部署已经完成。点击红色框选的链接 (<a href="https://movies-zexiplus.cloud.okteto.net/" target="_blank" rel="noopener">https://movies-zexiplus.cloud.okteto.net/</a>) , 即可访问 movies 站点 web 服务。</p>
-<p><img src="/images/shot5.jpg" alt="shot5"></p>
+<p><img src="/tech-blog/2020/09/15/okteto/shot5.jpg" alt="shot5"></p>
 <p>访问站点预览：</p>
-<p><img src="/images/shot6.jpg" alt="shot6"></p>
+<p><img src="/tech-blog/2020/09/15/okteto/shot6.jpg" alt="shot6"></p>
 <h2 id="设置凭据"><a href="#设置凭据" class="headerlink" title="设置凭据"></a>设置凭据</h2><p>在开始本地调试前， 你需要设置凭据</p>
 <p>下载 okteto cloud kubernetes 集群凭据至本地</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">okteto namespace</span><br></pre></td></tr></table></figure>
@@ -107,11 +107,11 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd frontend</span><br><span class="line">okteto up</span><br></pre></td></tr></table></figure>
 
 <p>等待启动完成， 返回 okteto cloud 界面观察 frontend 服务进入 in development 状态</p>
-<p><img src="/images/shot7.jpg" alt="shot7"></p>
+<p><img src="/tech-blog/2020/09/15/okteto/shot7.jpg" alt="shot7"></p>
 <p>编辑 <code>movies/frontend/src/App.scss</code> 背景颜色为红色并保存</p>
-<p><img src="/images/shot8.jpg" alt="shot8"></p>
+<p><img src="/tech-blog/2020/09/15/okteto/shot8.jpg" alt="shot8"></p>
 <p>等待构建完成，返回浏览器 <a href="https://movies-zexiplus.cloud.okteto.net/" target="_blank" rel="noopener">https://movies-zexiplus.cloud.okteto.net/</a> 页面 , 发现页面背景色已改变为红色。</p>
-<p><img src="/images/shot9.jpg" alt="shot9"></p>
+<p><img src="/tech-blog/2020/09/15/okteto/shot9.jpg" alt="shot9"></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>至此， 使用 okteto 部署并调试官方示例 movies 应用已完成。</p>
 
       
