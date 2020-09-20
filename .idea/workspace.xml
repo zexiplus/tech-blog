@@ -20,8 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90be345d-09c3-4c99-ab22-81ec9c987491" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/source/friends/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/images/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/images/favicon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/okteto.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/okteto.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/category/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/categories/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/images/shot1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/images/shot2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/images/shot3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/images/shot4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/images/shot5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/images/shot6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/images/shot7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/images/shot8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/images/shot9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/tag/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/hexo-theme-oranges/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/hexo-theme-oranges/_config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,18 +58,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/source/_posts/okteto" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/source/friends" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/source/friends" />
+      <recent name="$PROJECT_DIR$/source/images" />
       <recent name="$PROJECT_DIR$/source/_posts/okteto" />
       <recent name="$PROJECT_DIR$/source/_posts/imgs" />
       <recent name="$PROJECT_DIR$/source/_posts" />
-      <recent name="$PROJECT_DIR$/.github/workflows-bak" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -78,7 +93,8 @@
       <workItem from="1596463274413" duration="3299000" />
       <workItem from="1596548815467" duration="5140000" />
       <workItem from="1600178672220" duration="1832000" />
-      <workItem from="1600354409661" duration="3730000" />
+      <workItem from="1600354409661" duration="4079000" />
+      <workItem from="1600566127572" duration="4816000" />
     </task>
     <servers />
   </component>
@@ -147,9 +163,10 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="997" y="529" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1593852405686" />
-    <state x="100" y="78" width="2360" height="1261" key="DiffContextDialog" timestamp="1596466913162">
-      <screen x="0" y="23" width="2560" height="1348" />
+    <state x="80" y="47" width="1888" height="1078" key="DiffContextDialog" timestamp="1600566608750">
+      <screen x="0" y="23" width="2048" height="1129" />
     </state>
+    <state x="80" y="47" width="1888" height="1078" key="DiffContextDialog/0.23.2048.1129@0.23.2048.1129" timestamp="1600566608750" />
     <state x="100" y="78" width="2360" height="1261" key="DiffContextDialog/0.23.2560.1348@0.23.2560.1348" timestamp="1596466913162" />
     <state x="100" y="100" width="2360" height="1240" key="DiffContextDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1594047171916" />
     <state x="631" y="287" key="SettingsEditor" timestamp="1600359217485">
@@ -157,9 +174,10 @@
     </state>
     <state x="631" y="287" key="SettingsEditor/0.0.2048.1152@0.0.2048.1152" timestamp="1600359217485" />
     <state x="789" y="359" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1596554373211" />
-    <state x="987" y="475" width="659" height="518" key="find.popup" timestamp="1596553729188">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state x="790" y="369" width="578" height="783" key="find.popup" timestamp="1600568249758">
+      <screen x="0" y="0" width="2048" height="1152" />
     </state>
+    <state x="790" y="369" width="578" height="783" key="find.popup/0.0.2048.1152@0.0.2048.1152" timestamp="1600568249758" />
     <state x="987" y="475" width="659" height="518" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1596553729188" />
     <state x="754" y="481" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1600359235754">
       <screen x="0" y="0" width="2048" height="1152" />

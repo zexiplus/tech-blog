@@ -18,14 +18,15 @@
 # 网站图标
 favicon:
   enable: true
-  icon: /images/favicon.png
-  touch_icon: /images/favicon.png
+  icon: /tech-blog/images/favicon.png
+  touch_icon: /tech-blog/images/favicon.png
+  path: /tech-blog
 
 # 用户头像与昵称
 avatar:
-  author_photo: /images/avatar.png
-  author_nickname: Oranges
-  path: /
+  author_photo: /tech-blog/images/avatar.png
+  author_nickname: Float
+  path: /tech-blog
 
 # Google 分析
 # https://analytics.google.com
@@ -42,12 +43,12 @@ comments:
 
   gitalk:
     # https://github.com/gitalk/gitalk#usage查看官方教程
-    enable: false
-    clientID:
-    clientSecret:
-    repo:
-    owner:
-    admin:
+    enable: true
+    clientID: 895a41c753961affe619
+    clientSecret: 3f871a0d9aca443197e6d15722acfc129798e666
+    repo: https://zexiplus.github.com/tech-blog
+    owner: zexiplus
+    admin: zexiplus
     id: location.pathname
     distractionFreeMode: false
 
@@ -79,27 +80,27 @@ navbar:
   -
     name: Archives
     enable: true
-    path: /archives/
+    path: /tech-blog/archives/
     key: archives
   -
     name: Categories
-    enable: false
-    path: /categories/
+    enable: true
+    path: /tech-blog/categories/
     key: categories
   -
     name: Tags
     enable: true
-    path: /tags/
+    path: /tech-blog/tags/
     key: tags
   -
     name: Friends
     enable: true
-    path: /friends/
+    path: /tech-blog/friends/
     key: friends
   -
     name: About
     enable: true
-    path: /about/
+    path: /tech-blog/about/
     key: about
 
 # 文章目录

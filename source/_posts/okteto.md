@@ -4,8 +4,6 @@ date: 2020-09-15 23:51:05
 tags: okteto, devops, kubernetes
 ---
 
-# okteto 初阶使用指南：部署/调试官方示例 movies 站点
-
 okteto， 一个在 kubernetes 环境中开发调试的工具
 
 
