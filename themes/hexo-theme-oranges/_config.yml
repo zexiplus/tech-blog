@@ -33,8 +33,8 @@ avatar:
 # 注册Google分析账号，在管理/创建媒体资源/选择网站/填写相关信息后得到跟踪Id，一般格式为UA-xxxxxxx-x
 # 如之前已有注册账号，在管理/跟踪信息/跟踪代码/找到跟踪ID，一般格式为UA-xxxxxxx-x
 gtag:
-  enable: false
-  gtagkey: UA-xxxxxxx-x
+  enable: true
+  gtagkey: UA-178418787-1
 
 # 文章评论系统
 comments:
@@ -94,7 +94,7 @@ navbar:
     key: tags
   -
     name: Friends
-    enable: true
+    enable: false
     path: /tech-blog/friends/
     key: friends
   -
@@ -136,27 +136,27 @@ footer:
     -
       name: github
       icon: github
-      path: https://github.com/zchengsite/hexo-theme-oranges
+      path: https://github.com/zexiplus
     -
       name: email
       icon: envelope
-      path: 
+      path: mailto:zexiplus@outlook.com
     -
-      name: facebook
+      name: medium
       icon: facebooksquare
-      path:
+      path: https://medium.com/@zexiplus
     -
       name: twitter
       icon: twitter
-      path:
+      path: https://twitter.com/float25685016
     -
-      name: wechat
+      name: juejin
       icon: wechat
-      path:
+      path: https://juejin.im/user/3227821869640990
     -
-      name: weibo
+      name: jianshu
       icon: weibo
-      path:
+      path: https://www.jianshu.com/u/1b39ade72cb1
     -
       # rss需安装 hexo-generator-feed 插件
       # 具体参照https://github.com/hexojs/hexo-generator-feed
