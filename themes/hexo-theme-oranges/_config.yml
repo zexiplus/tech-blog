@@ -75,7 +75,7 @@ navbar:
   -
     name: Home
     enable: true
-    path: /
+    path: /tech-blog/
     key: home
   -
     name: Archives
