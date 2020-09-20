@@ -20,22 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90be345d-09c3-4c99-ab22-81ec9c987491" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/source/friends/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/images/avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/images/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/okteto.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/okteto.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/category/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/categories/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/images/shot1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/images/shot2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/images/shot3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/images/shot4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/images/shot5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/images/shot6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/images/shot7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/images/shot8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/images/shot9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/tag/index.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/hexo-theme-oranges/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/hexo-theme-oranges/_config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +78,7 @@
       <workItem from="1596548815467" duration="5140000" />
       <workItem from="1600178672220" duration="1832000" />
       <workItem from="1600354409661" duration="4079000" />
-      <workItem from="1600566127572" duration="4816000" />
+      <workItem from="1600566127572" duration="5178000" />
     </task>
     <servers />
   </component>

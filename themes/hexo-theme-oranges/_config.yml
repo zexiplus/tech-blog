@@ -46,7 +46,7 @@ comments:
     enable: true
     clientID: 895a41c753961affe619
     clientSecret: 3f871a0d9aca443197e6d15722acfc129798e666
-    repo: https://zexiplus.github.com/tech-blog
+    repo: tech-blog
     owner: zexiplus
     admin: zexiplus
     id: location.pathname
