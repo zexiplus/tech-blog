@@ -10,8 +10,8 @@
   <title>okteto 初阶使用指南：部署/调试官方示例 movies 站点 | Hexo</title>
 
   
-    <link rel="apple-touch-icon" href="/images/favicon.png">
-    <link rel="icon" href="/images/favicon.png">
+    <link rel="apple-touch-icon" href="/tech-blog/images/favicon.png">
+    <link rel="icon" href="/tech-blog/images/favicon.png">
   
 
   <!-- Raleway-Font -->
@@ -44,13 +44,13 @@
     <div id="app">
       <div class="header">
   <div class="avatar">
-    <a href="/">
+    <a href="/tech-blog">
       <!-- 头像取消懒加载，添加no-lazy -->
       
-        <img src="/images/avatar.png" alt="">
+        <img src="/tech-blog/images/avatar.png" alt="">
       
     </a>
-    <div class="nickname"><a href="/">Oranges</a></div>
+    <div class="nickname"><a href="/tech-blog">Float</a></div>
   </div>
   <div class="navbar">
     <ul>
@@ -59,20 +59,24 @@
           <a href="/">Home</a>
         </li>
       
-        <li class="nav-item" data-path="/archives/">
-          <a href="/archives/">Archives</a>
+        <li class="nav-item" data-path="/tech-blog/archives/">
+          <a href="/tech-blog/archives/">Archives</a>
         </li>
       
-        <li class="nav-item" data-path="/tags/">
-          <a href="/tags/">Tags</a>
+        <li class="nav-item" data-path="/tech-blog/categories/">
+          <a href="/tech-blog/categories/">Categories</a>
         </li>
       
-        <li class="nav-item" data-path="/friends/">
-          <a href="/friends/">Friends</a>
+        <li class="nav-item" data-path="/tech-blog/tags/">
+          <a href="/tech-blog/tags/">Tags</a>
         </li>
       
-        <li class="nav-item" data-path="/about/">
-          <a href="/about/">About</a>
+        <li class="nav-item" data-path="/tech-blog/friends/">
+          <a href="/tech-blog/friends/">Friends</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tech-blog/about/">
+          <a href="/tech-blog/about/">About</a>
         </li>
       
     </ul>
@@ -120,7 +124,7 @@
           
       </div>
       <div class="markdown-body">
-        <h1 id="okteto-初阶使用指南：部署-调试官方示例-movies-站点"><a href="#okteto-初阶使用指南：部署-调试官方示例-movies-站点" class="headerlink" title="okteto 初阶使用指南：部署/调试官方示例 movies 站点"></a>okteto 初阶使用指南：部署/调试官方示例 movies 站点</h1><p>okteto， 一个在 kubernetes 环境中开发调试的工具</p>
+        <p>okteto， 一个在 kubernetes 环境中开发调试的工具</p>
 <h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><ul>
 <li>已拥有 github 账号</li>
 <li>已拥有 okteto 账号，若无可<a href="https://cloud.okteto.com/#/login" target="_blank" rel="noopener">注册</a></li>
@@ -205,7 +209,7 @@
   <div class="post-catalog" id="catalog">
     <div class="title">Contents</div>
     <div class="catalog-content">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#okteto-初阶使用指南：部署-调试官方示例-movies-站点"><span class="toc-text">okteto 初阶使用指南：部署&#x2F;调试官方示例 movies 站点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前提条件"><span class="toc-text">前提条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#克隆项目"><span class="toc-text">克隆项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#登陆-okteto-cloud"><span class="toc-text">登陆 okteto cloud</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署服务"><span class="toc-text">部署服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#访问服务"><span class="toc-text">访问服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置凭据"><span class="toc-text">设置凭据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地调试"><span class="toc-text">本地调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前提条件"><span class="toc-text">前提条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#克隆项目"><span class="toc-text">克隆项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#登陆-okteto-cloud"><span class="toc-text">登陆 okteto cloud</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署服务"><span class="toc-text">部署服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#访问服务"><span class="toc-text">访问服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置凭据"><span class="toc-text">设置凭据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地调试"><span class="toc-text">本地调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol>
     </div>
   </div>
 
@@ -221,6 +225,25 @@
 
 
 
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+  <div id="gitalk-container"></div>
+
+  <script>
+    const gitalk = new Gitalk({
+      clientID: '895a41c753961affe619',
+      clientSecret: '3f871a0d9aca443197e6d15722acfc129798e666',
+      repo: 'https://zexiplus.github.com/tech-blog',
+      owner: 'zexiplus',
+      admin: ['zexiplus'],
+      id: location.pathname,
+      distractionFreeMode: false
+    })
+
+    gitalk.render('gitalk-container')
+  </script>
 
 
       </div>

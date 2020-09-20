@@ -7,11 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
   
-  <title>tag | Hexo</title>
+  <title>标签 | Hexo</title>
 
   
-    <link rel="apple-touch-icon" href="/images/favicon.png">
-    <link rel="icon" href="/images/favicon.png">
+    <link rel="apple-touch-icon" href="/tech-blog/images/favicon.png">
+    <link rel="icon" href="/tech-blog/images/favicon.png">
   
 
   <!-- Raleway-Font -->
@@ -44,13 +44,13 @@
     <div id="app">
       <div class="header">
   <div class="avatar">
-    <a href="/">
+    <a href="/tech-blog">
       <!-- 头像取消懒加载，添加no-lazy -->
       
-        <img src="/images/avatar.png" alt="">
+        <img src="/tech-blog/images/avatar.png" alt="">
       
     </a>
-    <div class="nickname"><a href="/">Oranges</a></div>
+    <div class="nickname"><a href="/tech-blog">Float</a></div>
   </div>
   <div class="navbar">
     <ul>
@@ -59,20 +59,24 @@
           <a href="/">Home</a>
         </li>
       
-        <li class="nav-item" data-path="/archives/">
-          <a href="/archives/">Archives</a>
+        <li class="nav-item" data-path="/tech-blog/archives/">
+          <a href="/tech-blog/archives/">Archives</a>
         </li>
       
-        <li class="nav-item" data-path="/tags/">
-          <a href="/tags/">Tags</a>
+        <li class="nav-item" data-path="/tech-blog/categories/">
+          <a href="/tech-blog/categories/">Categories</a>
         </li>
       
-        <li class="nav-item" data-path="/friends/">
-          <a href="/friends/">Friends</a>
+        <li class="nav-item" data-path="/tech-blog/tags/">
+          <a href="/tech-blog/tags/">Tags</a>
         </li>
       
-        <li class="nav-item" data-path="/about/">
-          <a href="/about/">About</a>
+        <li class="nav-item" data-path="/tech-blog/friends/">
+          <a href="/tech-blog/friends/">Friends</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tech-blog/about/">
+          <a href="/tech-blog/about/">About</a>
         </li>
       
     </ul>
@@ -100,11 +104,11 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">tag</div>
+      <div class="post-title">tags</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime" title="Update time"></i>
-          2020-08-04
+          2020-09-20
         </span>
         
       </div>
@@ -119,7 +123,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime" title="Update time"></i>
-              2020-08-04
+              2020-09-20
             </span>
             
           </div>
@@ -137,6 +141,25 @@
 
 
 
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+  <div id="gitalk-container"></div>
+
+  <script>
+    const gitalk = new Gitalk({
+      clientID: '895a41c753961affe619',
+      clientSecret: '3f871a0d9aca443197e6d15722acfc129798e666',
+      repo: 'https://zexiplus.github.com/tech-blog',
+      owner: 'zexiplus',
+      admin: ['zexiplus'],
+      id: location.pathname,
+      distractionFreeMode: false
+    })
+
+    gitalk.render('gitalk-container')
+  </script>
 
 
       </div>
