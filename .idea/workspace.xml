@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90be345d-09c3-4c99-ab22-81ec9c987491" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/hexo-theme-oranges/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/hexo-theme-oranges/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/hexo-theme-oranges/source/images/avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/hexo-theme-oranges/source/images/favicon.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,15 +43,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/source/friends" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/source/images" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/source/friends" />
       <recent name="$PROJECT_DIR$/source/images" />
+      <recent name="$PROJECT_DIR$/source/friends" />
       <recent name="$PROJECT_DIR$/source/_posts/okteto" />
       <recent name="$PROJECT_DIR$/source/_posts/imgs" />
       <recent name="$PROJECT_DIR$/source/_posts" />
@@ -159,11 +159,15 @@
     </state>
     <state x="631" y="287" key="SettingsEditor/0.0.2048.1152@0.0.2048.1152" timestamp="1600359217485" />
     <state x="789" y="359" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1596554373211" />
-    <state x="790" y="369" width="578" height="783" key="find.popup" timestamp="1600596829784">
+    <state x="790" y="369" width="578" height="783" key="find.popup" timestamp="1600597820275">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="790" y="369" width="578" height="783" key="find.popup/0.0.2048.1152@0.0.2048.1152" timestamp="1600596829784" />
+    <state x="790" y="369" width="578" height="783" key="find.popup/0.0.2048.1152@0.0.2048.1152" timestamp="1600597820275" />
     <state x="987" y="475" width="659" height="518" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1596553729188" />
+    <state x="689" y="259" width="670" height="676" key="search.everywhere.popup" timestamp="1600597841681">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="689" y="259" width="670" height="676" key="search.everywhere.popup/0.0.2048.1152@0.0.2048.1152" timestamp="1600597841681" />
     <state x="754" y="481" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1600359235754">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>

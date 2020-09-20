@@ -18,8 +18,8 @@
 # 网站图标
 favicon:
   enable: true
-  icon: /tech-blog/images/favicon.png
-  touch_icon: /tech-blog/images/favicon.png
+  icon: /tech-blog/images/avatar.png
+  touch_icon: /tech-blog/images/avatar.png
   path: /tech-blog
 
 # 用户头像与昵称
