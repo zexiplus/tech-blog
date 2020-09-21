@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
   
-  <title>okteto 初阶使用指南：部署/调试官方示例 movies 站点 | Hexo</title>
+  <title>使用 Hexo + Github Pages + Actions 自动构建/部署站点 | Hexo</title>
 
   
     <link rel="apple-touch-icon" href="/tech-blog/images/avatar.png">
@@ -110,19 +110,19 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">okteto 初阶使用指南：部署/调试官方示例 movies 站点</div>
+      <div class="post-title">使用 Hexo + Github Pages + Actions 自动构建/部署站点</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime" title="Update time"></i>
-          2020-09-15
+          2020-09-21
         </span>
         
               <span class="post-tags">
                 <i class="iconfont icon-tags" title="Tags"></i>
                 
                 <span class="span--tag">
-                  <a href="/tech-blog/tags/okteto-devops-kubernetes/" title="okteto, devops, kubernetes">
-                    <b>#</b> okteto, devops, kubernetes
+                  <a href="/tech-blog/tags/hexo-blog-github-pages-github-actions/" title="hexo, blog, github pages, github actions">
+                    <b>#</b> hexo, blog, github pages, github actions
                   </a>
                 </span>
                 
@@ -130,75 +130,69 @@
           
       </div>
       <div class="markdown-body">
-        <p>okteto， 一个在 kubernetes 环境中开发调试的工具</p>
+        <p>搭建站点是程序开发中一个常见的需求， 目前可用的方案有很多。这片文章会介绍如何使用 hexo, git pages, github actions 构建并自动化部署一套博客系统。</p>
 <h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><ul>
-<li>已拥有 github 账号</li>
-<li>已拥有 okteto 账号，若无可<a href="https://cloud.okteto.com/#/login" target="_blank" rel="noopener">注册</a></li>
-<li>已安装 kubenetes </li>
+<li>github 账号</li>
+<li>Nodejs + npm</li>
 </ul>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><strong>macOs / linux 安装</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl https://get.okteto.com -sSfL | sh</span><br><span class="line">// 或者</span><br><span class="line">brew install okteto</span><br></pre></td></tr></table></figure>
+<h2 id="工具介绍"><a href="#工具介绍" class="headerlink" title="工具介绍"></a>工具介绍</h2><p><strong>hexo</strong></p>
+<p>hexo 是一套开源博客工具，有丰富的主题与插件，提供命令行工具，文档可参考 <a href="https://hexo.io" target="_blank" rel="noopener">hexo</a></p>
+<p><strong>github actions</strong></p>
+<p>github actions 是 github 的自动构建平台， 具有非常丰富的插件系统， 文档可参考 <a href="https://github.com/features/actions" target="_blank" rel="noopener">actions</a></p>
+<p><strong>github pages</strong></p>
+<p>gitpages 是 github 的静态网站托管平台，可与 actions 轻松结合, 文档可参考 <a href="https://pages.github.com/" target="_blank" rel="noopener">pages</a></p>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p><strong>安装 hexo</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo hexo-cli</span><br></pre></td></tr></table></figure>
 
-<p><strong>windows 安装</strong></p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop install okteto</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>初始化项目</strong></p>
+<p>新建代码仓库， 复制代码库地址 例如<code>git@github.com:zexiplus/hexo-demo.git</code> ，本地执行 <code>hexo init hexo-demo</code>, 执行 <code>cd hexo-demo</code> 项目，  执行<code>git init</code> 初始化 git 目录，执行 <code>git remote add origin git@github.com:zexiplus/hexo-demo.git</code> 添加源，执行<code>git add . &amp;&amp; git commit -m &#39;init project&#39;</code> 初始化项目，执行 <code>git push origin HEAD:source</code> 把提交推送至远程 source 分支， 项目初始化完毕。</p>
+<p><img src="/tech-blog/2020/09/21/hexo/hexo1.png" alt="hexo1"></p>
+<p><img src="/tech-blog/2020/09/21/hexo/hexo2.png" alt="hexo2"></p>
+<h2 id="配置-Actions"><a href="#配置-Actions" class="headerlink" title="配置 Actions"></a>配置 Actions</h2><p>在项目的根目录下新建文件夹及文件 <code>.github/workflows/pages.yml</code>, 拷贝内容如下</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Pages</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">source</span>  <span class="comment"># default branch</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">pages:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Use</span> <span class="string">Node.js</span> <span class="number">12.</span><span class="string">x</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@v1</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="string">'12.x'</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Cache</span> <span class="string">NPM</span> <span class="string">dependencies</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/cache@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">node_modules</span></span><br><span class="line">          <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">runner.OS</span> <span class="string">&#125;&#125;-npm-cache</span></span><br><span class="line">          <span class="attr">restore-keys:</span> <span class="string">|</span></span><br><span class="line">            <span class="string">$&#123;&#123;</span> <span class="string">runner.OS</span> <span class="string">&#125;&#125;-npm-cache</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">Dependencies</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Clean</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">clean</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Build</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">build</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">github_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">publish_dir:</span> <span class="string">./public</span></span><br><span class="line">          <span class="attr">publish_branch:</span> <span class="string">pages</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/tech-blog/2020/09/21/hexo/hexo4.png" alt="hexo4"></p>
+<h2 id="配置-hexo"><a href="#配置-hexo" class="headerlink" title="配置 hexo"></a>配置 hexo</h2><p>编辑项目根目录下<code>_config.yml</code>，修改 url 字段为你的 github pages 的访问地址， 修改 root 字段为路径前缀， 示例如下</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">http://zexiplus.github.io/hexo-demo</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/hexo-demo</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br><span class="line"><span class="attr">pretty_urls:</span></span><br><span class="line">  <span class="attr">trailing_index:</span> <span class="literal">true</span> <span class="comment"># Set to false to remove trailing 'index.html' from permalinks</span></span><br><span class="line">  <span class="attr">trailing_html:</span> <span class="literal">true</span> <span class="comment"># Set to false to remove trailing '.html' from permalinks</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="克隆项目"><a href="#克隆项目" class="headerlink" title="克隆项目"></a>克隆项目</h2><p>浏览器打开：<a href="https://github.com/okteto/movies，并" target="_blank" rel="noopener">https://github.com/okteto/movies，并</a> fork 至自己的仓库</p>
-<p><img src="/tech-blog/2020/09/15/okteto/shot1.jpg" alt="shot1"></p>
-<p><img src="/tech-blog/2020/09/15/okteto/shot2.jpg" alt="shot2"></p>
-<h2 id="登陆-okteto-cloud"><a href="#登陆-okteto-cloud" class="headerlink" title="登陆 okteto cloud"></a>登陆 okteto cloud</h2><p>浏览器打开：<a href="https://cloud.okteto.com/#/login，" target="_blank" rel="noopener">https://cloud.okteto.com/#/login，</a> 并登陆 okteto cloud， 点击 deploy</p>
-<p><img src="/tech-blog/2020/09/15/okteto/shot3.jpg" alt="shot3"></p>
-<h2 id="部署服务"><a href="#部署服务" class="headerlink" title="部署服务"></a>部署服务</h2><p>复制之前 fork 的代码仓库地址(例如: <a href="https://github.com/zexiplus/movies)并填入" target="_blank" rel="noopener">https://github.com/zexiplus/movies)并填入</a>, 点击 Deploy 按钮， 等待部署完成。</p>
-<p><img src="/tech-blog/2020/09/15/okteto/shot4.jpg" alt="shot4"></p>
-<h2 id="访问服务"><a href="#访问服务" class="headerlink" title="访问服务"></a>访问服务</h2><p>当看到三个服务 api， frontend， mongodb 均属于 running 状态， 部署已经完成。点击红色框选的链接 (<a href="https://movies-zexiplus.cloud.okteto.net/" target="_blank" rel="noopener">https://movies-zexiplus.cloud.okteto.net/</a>) , 即可访问 movies 站点 web 服务。</p>
-<p><img src="/tech-blog/2020/09/15/okteto/shot5.jpg" alt="shot5"></p>
-<p>访问站点预览：</p>
-<p><img src="/tech-blog/2020/09/15/okteto/shot6.jpg" alt="shot6"></p>
-<h2 id="设置凭据"><a href="#设置凭据" class="headerlink" title="设置凭据"></a>设置凭据</h2><p>在开始本地调试前， 你需要设置凭据</p>
-<p>下载 okteto cloud kubernetes 集群凭据至本地</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">okteto namespace</span><br></pre></td></tr></table></figure>
-
-<p>按照指引会在 <code>$HOME/.kube</code> 文件夹下生成 kubernetes 凭据。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Authentication required. Do you want to log into Okteto? [y/n]: y</span><br><span class="line">What is the URL of your Okteto instance? [https://cloud.okteto.com]:</span><br><span class="line">Authentication will continue in your default browser</span><br><span class="line">✓  Logged in as zexiplus</span><br><span class="line">✓  Updated context 'cloud_okteto_com' in '/Users/float/.kube/config'</span><br></pre></td></tr></table></figure>
-
-<p>切换 kubernetes 的 context 至 okteto cloud 集群</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查看集群 context 信息</span></span><br><span class="line">kubectl config get-contexts</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 返回结果 =&gt;&gt;</span></span><br><span class="line">CURRENT   NAME                                           CLUSTER                                        AUTHINFO                                       NAMESPACE</span><br><span class="line">*         cloud_okteto_com                               cloud_okteto_com                               b33c626d-f133-4a0a-bc32-8eaea7624456           zexiplus</span><br><span class="line">          docker-desktop                                 docker-desktop                                 docker-desktop                                 </span><br><span class="line">          docker-for-desktop                             docker-desktop                                 docker-desktop                                 </span><br><span class="line">          gke_my-project-282358_asia-east1-a_cluster-1   gke_my-project-282358_asia-east1-a_cluster-1   gke_my-project-282358_asia-east1-a_cluster-1   </span><br><span class="line">          minikube                                       minikube                                       minikube                                       spinnaker</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 切换当前集群 context 至 okteto cloud</span></span><br><span class="line">kubectl config use-context cloud_okteto_com</span><br></pre></td></tr></table></figure>
+<h2 id="提交修改"><a href="#提交修改" class="headerlink" title="提交修改"></a>提交修改</h2><p>提交修改， 并推送本地分支至远程 <code>source</code> 分支， 查看 Actions 面板查看构建详情</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m 'feat: change config'</span><br><span class="line">git push origin HEAD:source</span><br></pre></td></tr></table></figure>
 
 
 
 
 
-<h2 id="本地调试"><a href="#本地调试" class="headerlink" title="本地调试"></a>本地调试</h2><p>克隆代码至本地：<code>git clone git@github.com:zexiplus/movies.git</code>， 使用代码编辑器打开。</p>
-<p>进入 <code>frontend</code> 目录并启动 okteto </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd frontend</span><br><span class="line">okteto up</span><br></pre></td></tr></table></figure>
-
-<p>等待启动完成， 返回 okteto cloud 界面观察 frontend 服务进入 in development 状态</p>
-<p><img src="/tech-blog/2020/09/15/okteto/shot7.jpg" alt="shot7"></p>
-<p>编辑 <code>movies/frontend/src/App.scss</code> 背景颜色为红色并保存</p>
-<p><img src="/tech-blog/2020/09/15/okteto/shot8.jpg" alt="shot8"></p>
-<p>等待构建完成，返回浏览器 <a href="https://movies-zexiplus.cloud.okteto.net/" target="_blank" rel="noopener">https://movies-zexiplus.cloud.okteto.net/</a> 页面 , 发现页面背景色已改变为红色。</p>
-<p><img src="/tech-blog/2020/09/15/okteto/shot9.jpg" alt="shot9"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>至此， 使用 okteto 部署并调试官方示例 movies 应用已完成。</p>
+<h2 id="配置-Github-pages"><a href="#配置-Github-pages" class="headerlink" title="配置 Github pages"></a>配置 Github pages</h2><p>在 github 项目页面选择 settings 面板， 找到 Github Pages 栏， branch 选择 pages 分支， 路径选择跟路径， 点击 save 保存， 等待片刻， 点击 生成的链接即可访问博客</p>
+<p><img src="/tech-blog/2020/09/21/hexo/hexo5.png" alt="hexo5"></p>
+<p><img src="/tech-blog/2020/09/21/hexo/hexo6.png" alt="hexo6"></p>
 
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-next">
             
+              <a href="/tech-blog/2020/09/15/okteto/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
           </div>
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime" title="Update time"></i>
-              2020-09-15
+              2020-09-21
             </span>
             
                   <span class="post-tags">
                     <i class="iconfont icon-tags" title="Tags"></i>
                     
                     <span class="span--tag">
-                      <a href="/tech-blog/tags/okteto-devops-kubernetes/" title="okteto, devops, kubernetes">
-                        <b>#</b> okteto, devops, kubernetes
+                      <a href="/tech-blog/tags/hexo-blog-github-pages-github-actions/" title="hexo, blog, github pages, github actions">
+                        <b>#</b> hexo, blog, github pages, github actions
                       </a>
                     </span>
                     
@@ -206,11 +200,6 @@
               
           </div>
           <div class="post-foot-prev">
-            
-              <a href="/tech-blog/2020/09/21/hexo/" target="_self">
-                <span>Next</span>
-                <i class="iconfont icon-chevronright"></i>
-              </a>
             
           </div>
         </div>
@@ -220,7 +209,7 @@
   <div class="post-catalog" id="catalog">
     <div class="title">Contents</div>
     <div class="catalog-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前提条件"><span class="toc-text">前提条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#克隆项目"><span class="toc-text">克隆项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#登陆-okteto-cloud"><span class="toc-text">登陆 okteto cloud</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署服务"><span class="toc-text">部署服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#访问服务"><span class="toc-text">访问服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置凭据"><span class="toc-text">设置凭据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地调试"><span class="toc-text">本地调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前提条件"><span class="toc-text">前提条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工具介绍"><span class="toc-text">工具介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化"><span class="toc-text">初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置-Actions"><span class="toc-text">配置 Actions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置-hexo"><span class="toc-text">配置 hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#提交修改"><span class="toc-text">提交修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置-Github-pages"><span class="toc-text">配置 Github pages</span></a></li></ol>
     </div>
   </div>
 
